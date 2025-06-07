@@ -1,4 +1,4 @@
-# Danial Ebrat
+# DanialEBR
 
 Undergraduate Computer Engineering Student  
 Embedded Systems & AI Enthusiast
