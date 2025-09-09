@@ -12,8 +12,8 @@ I'm an undergraduate student in Computer Engineering with a passion for both har
 
 ## Skills & Tools
 
-- Languages: Python, C, C++, Assembly, VHDL  
-- Tools & Frameworks: PyTorch, CUDA, STM32, Arduino, Atmega  
+- Languages: Python, C, C++, C#, Assembly, VHDL  
+- Tools & Frameworks: PyTorch, CUDA, STM32, ASP.net, Arduino, Atmega  
 - Domains: Embedded Systems, Hardware Design, Machine Learning, NLP
 
 ---
