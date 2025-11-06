@@ -13,8 +13,8 @@ I'm an undergraduate student in Computer Engineering with a passion for both har
 ## Skills & Tools
 
 - Languages: Python, C, C++, C#, Assembly, VHDL  
-- Tools & Frameworks: PyTorch, CUDA, STM32, ASP.net, Arduino, Atmega  
-- Domains: Embedded Systems, Hardware Design, Machine Learning, NLP
+- Tools & Frameworks: PyTorch, FasrAPI, CUDA, STM32, ASP.net, Arduino, Atmega  
+- Domains: Embedded Systems, Hardware Design, Machine Learning, NLP, Backend
 
 ---
 
@@ -22,7 +22,8 @@ I'm an undergraduate student in Computer Engineering with a passion for both har
 
 - Build and program embedded systems using microcontrollers  
 - Develop and train machine learning models, including NLP pipelines  
-- Refactor and organize code for clarity and long-term maintainability  
+- Refactor and organize code for clarity and long-term maintainability
+- Build and program Backend web-application and web using FastAPI and ASP.net
 - Work on both academic and business-focused projects  
 - Open to collaborations in any domain related to my field of interest
 
