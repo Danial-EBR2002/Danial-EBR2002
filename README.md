@@ -1,6 +1,5 @@
-# Hi, I'm Danial Ebrazeh
-
-I am a backend-focused full-stack developer with a multidisciplinary background in software engineering, data engineering, embedded systems, IoT, machine learning, and intelligent systems.
+# Hi, I'm Danial Ebrazeh 
+I am Danial, a Computer Engineering undergrad and a backend-focused full-stack developer with a multidisciplinary background in software engineering, data engineering, embedded systems, IoT, machine learning, and intelligent systems.
 
 My main area of expertise is **backend development**, especially designing and building reliable APIs, database-driven systems, and scalable software architectures. I work with **FastAPI** and **ASP.NET Core**, and I also have full-stack experience using **Vue.js** on the frontend.
 
