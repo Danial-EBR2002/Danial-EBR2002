@@ -1,35 +1,134 @@
-# DanialEBR
+# Hi, I'm Danial Ebrazeh
 
-Undergraduate Computer Engineering Student  
-Embedded Systems & AI Enthusiast
+I am a backend-focused full-stack developer with a multidisciplinary background in software engineering, data engineering, embedded systems, IoT, machine learning, and intelligent systems.
 
----
+My main area of expertise is **backend development**, especially designing and building reliable APIs, database-driven systems, and scalable software architectures. I work with **FastAPI** and **ASP.NET Core**, and I also have full-stack experience using **Vue.js** on the frontend.
 
-## About Me
-I'm an undergraduate student in Computer Engineering with a passion for both hardware and intelligent systems. My interests range from low-level programming and circuit design to high-level machine learning and NLP applications.
+Alongside software development, I have experience in **project management**, technical planning, and coordinating development workflows. This has helped me work not only as a developer, but also as someone who understands how technical systems are planned, structured, delivered, and maintained.
 
----
+Academically, I have research experience in **Natural Language Processing**. My NLP research focuses on the impact of linguistic data and corpus-based tools on teaching lexically ambiguous words to non-Persian speakers. I am also currently working on a research project related to **intelligent networks**, while keeping the specific details private at this stage.
 
-## Skills & Tools
-
-- Languages: Python, C, C++, C#, Assembly, VHDL, js
-- Tools & Frameworks: PyTorch, FastAPI, CUDA, STM32, ASP.net, Arduino, Atmega, Vue  
-- Domains: Embedded Systems, Hardware Design, Machine Learning, NLP, Backend
+I enjoy working at the intersection of software systems, intelligent engineering, embedded platforms, and data-driven methods.
 
 ---
 
-## What I Do
+## Main Focus Areas
 
-- Build and program embedded systems using microcontrollers  
-- Develop and train machine learning models, including NLP pipelines  
-- Refactor and organize code for clarity and long-term maintainability
-- Build and program Backend web-application and web using FastAPI and ASP.net
-- Work on both academic and business-focused projects  
-- Open to collaborations in any domain related to my field of interest
+- Backend Engineering
+- Full-Stack Web Development
+- Data Engineering
+- Database Design
+- Intelligent Networks
+- Embedded Systems & IoT
+- Machine Learning & Deep Learning
+- Natural Language Processing
+- Project Management
 
 ---
 
-## Projects
+## Technical Skills
 
-I'm open to working on any type of project that aligns with my areas of interest. Whether it's solo or team-based, academic or commercial, I focus on solving real problems with practical solutions.
+### Backend Development
 
+- FastAPI
+- ASP.NET Core
+- RESTful API Design
+- Backend Architecture
+- Authentication & Authorization
+- API Integration
+- Database-driven Applications
+
+### Frontend Development
+
+- Vue.js
+- JavaScript / TypeScript
+- HTML / CSS
+- Frontend Integration with Backend APIs
+
+### Data Engineering & Databases
+
+- Database Design
+- Relational Databases
+- NoSQL Databases
+- SQL
+- Data Modeling
+- Data Processing
+- Designing structured and maintainable data systems
+
+### Programming Languages
+
+- Python
+- C#
+- C / C++
+- JavaScript / TypeScript
+- SQL
+
+### Machine Learning & AI
+
+- PyTorch
+- Machine Learning
+- Deep Learning
+- Natural Language Processing
+- Data-driven Modeling
+
+### Embedded Systems & IoT
+
+- STM32
+- Arduino
+- ATmega Microcontrollers
+- ARM-based Systems
+- Embedded C/C++
+- Sensor Integration
+- IoT-based System Development
+
+### Engineering & Research
+
+- Intelligent Networks
+- Smart Engineering Systems
+- Mechatronic Systems
+- Applied Machine Learning
+- Research-oriented Development
+
+### Project Management
+
+- Technical Planning
+- Project Coordination
+- Development Workflow Management
+- Team Collaboration
+- Software Delivery Planning
+
+---
+
+## Research Background
+
+### Natural Language Processing
+
+I have worked on research related to:
+
+**The impact of linguistic data and corpus-based tools on teaching lexically ambiguous words to non-Persian speakers.**
+
+This work connects NLP, corpus linguistics, Persian language learning, and educational technology.
+
+### Intelligent Networks
+
+I am currently working on a research project related to **intelligent networks**. The specific details of this work are not publicly disclosed at the moment.
+
+---
+
+## What I Build
+
+I like building systems that combine practical software engineering with intelligent and data-driven methods. My work often connects backend systems, databases, embedded devices, and machine learning models.
+
+I am especially interested in projects where software is not just a user interface, but part of a larger intelligent system.
+
+---
+
+## GitHub Bio
+
+**Backend-focused Full-Stack Developer | Data Engineering | Embedded Systems & IoT | Machine Learning | NLP & Intelligent Networks Research**
+
+---
+
+## Connect with Me
+
+- Email: `danialebrazeh@gmail.com`
