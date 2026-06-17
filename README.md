@@ -123,12 +123,6 @@ I am especially interested in projects where software is not just a user interfa
 
 ---
 
-## GitHub Bio
-
-**Backend-focused Full-Stack Developer | Data Engineering | Embedded Systems & IoT | Machine Learning | NLP & Intelligent Networks Research**
-
----
-
 ## Connect with Me
 
 - Email: `danialebrazeh@gmail.com`
