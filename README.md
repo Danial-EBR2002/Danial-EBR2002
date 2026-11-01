@@ -1,232 +1,67 @@
-#  Hi, I'm Danial Ebrazeh
+# DANIAL.EXE — The CSIO Terminal
 
-### `Chief Software & Information Officer (CSIO)`
+A lightweight, original pixel-art portfolio for Danial Ebrazeh. Explore a small software-engineering office, interact with its terminals, or use Quick Navigation and the complete readable profile below the game.
 
-**Software & IT Leadership | Backend Engineering | Full-Stack Development | Intelligent Systems**
+## Portfolio
 
-`[ SYSTEM ONLINE ]` · `BUILDING SOFTWARE, LEADING TECHNOLOGY`
+Danial Ebrazeh is a Chief Software & Information Officer (CSIO), a Computer Engineering undergraduate, and a backend-focused full-stack software engineer. The portfolio presents software and IT leadership, engineering interests, public GitHub projects, and research without inventing company details or undisclosed research information.
 
----
+- Leadership: software engineering leadership, architecture, technical planning, IT strategy and coordination, workflow management, delivery, technology evaluation, and alignment with business requirements.
+- Backend: Python, FastAPI, C#, ASP.NET Core, RESTful APIs, architecture, authentication and authorization, API integration.
+- Frontend: Vue.js, JavaScript, TypeScript, HTML, CSS.
+- Data: SQL, relational databases, NoSQL, database design, modeling, and processing.
+- AI: PyTorch, machine learning, deep learning, and NLP.
+- Embedded and IoT: STM32, Arduino, ATmega, ARM-based systems, embedded C/C++, sensor integration, and IoT development.
+- Research: “The impact of linguistic data and corpus-based tools on teaching lexically ambiguous words to non-Persian speakers” and an ongoing intelligent-networks research project.
+- Contact: [danialebrazeh@gmail.com](mailto:danialebrazeh@gmail.com) · [GitHub profile](https://github.com/Danial-EBR2002)
 
-##  Player Profile
+## Features and controls
 
-| Attribute | Information |
-|---|---|
-|  Name | Danial Ebrazeh |
-|  Current Role | Chief Software & Information Officer (CSIO) |
-|  Engineering Specialty | Backend-Focused Full-Stack Development |
-|  Leadership Focus | Software Engineering & Information Technology |
-|  Education | Computer Engineering Undergraduate |
-|  Research Interests | NLP & Intelligent Networks |
-|  Main Mission | Building scalable software and leading technology initiatives |
+- Original canvas-drawn pixel-art environment; all artwork is local and created in source.
+- Explore Mode: focus/click the map and move with WASD or arrow keys; press E or Enter near a terminal.
+- Touch movement pad and Interact button on smaller screens.
+- Quick Navigation opens each portfolio file without moving the character.
+- Native accessible dialog panels close with Escape and return focus to their opener.
+- The full professional profile remains present as readable page content; gameplay is never required.
+- Collision detection, map bounds, idle/walk sprite states, and restrained animated monitor/server indicators.
+- Honors the operating system’s reduced-motion preference; no external fonts, runtime assets, APIs, or backend are required.
+- Selected project links are from public repositories on the actual GitHub account. Descriptions are grounded in their published READMEs; the page does not request the GitHub API at runtime.
 
----
+## Local preview
 
-##  About Me
+Requirements: Node.js 20+ with the built-in test runner and Python 3 (for the static preview server). No package installation is needed.
 
-I am a **Chief Software & Information Officer (CSIO)**, a Computer Engineering undergraduate, and a backend-focused full-stack developer with a multidisciplinary background in software engineering, data engineering, embedded systems, IoT, machine learning, and intelligent systems.
+```sh
+python -m http.server 4173
+```
 
-In my current corporate role, I work at the intersection of **software engineering leadership and information technology management**, combining technical decision-making with software architecture, project coordination, and the planning and delivery of technology solutions.
+Open `http://localhost:4173` in a browser. Serve the project over HTTP rather than opening `index.html` as a file, because the JavaScript uses native ES modules.
 
-My primary technical expertise lies in **backend engineering**, particularly designing reliable APIs, database-driven applications, and scalable software architectures. I work with **FastAPI** and **ASP.NET Core**, alongside full-stack development experience using **Vue.js**.
+## Tests
 
-I believe effective technical leadership requires both a solid engineering foundation and an understanding of how software, infrastructure, people, and business requirements connect.
+```sh
+npm test
+npm run check
+```
 
-Beyond my professional work, I am involved in academic research in **Natural Language Processing** and **Intelligent Networks**, exploring how intelligent and data-driven approaches can address practical engineering challenges.
+The automated suite covers map bounds, object collision, cardinal and normalized-diagonal movement, collision-aware reachability from the spawn point to every station, station-to-panel mapping, and idle-sprite/reduced-motion behavior. Browser QA should additionally cover keyboard/touch input, dialogs and focus restoration, every direct-navigation panel, responsive layout, project/email links, refresh behavior, and reduced motion.
 
----
+## Customization
 
-##  Leadership Console — CSIO
+- Edit portfolio copy and section structure in `index.html`.
+- Update public project descriptions and links in `src/portfolio-data.js`. Keep project claims grounded in the linked repository.
+- Adjust station positions, collision rectangles, movement speed, and world bounds in `src/world.js`.
+- Modify hand-drawn room tiles and sprites in `src/renderer.js`; the internal canvas is 640 × 400 pixels.
+- Input bindings and touch controls live in `src/input.js`; dialog and mode behavior live in `src/ui.js`.
+- Palette, pixel borders, responsive breakpoints, focus styles, and reduced-motion styles are in `styles.css`.
 
-`[ SOFTWARE + IT OPERATIONS ]`
+## GitHub Pages deployment
 
-As a **Chief Software & Information Officer**, my professional focus combines two interconnected domains:
+This is a static site with relative CSS, JavaScript, and favicon paths, so it works both at a user root and in a repository subpath.
 
-###  Software Engineering Leadership
+1. Push the site files to the intended GitHub repository’s `main` branch.
+2. On GitHub, open **Settings → Pages**.
+3. Under **Build and deployment**, choose **Deploy from a branch**, select `main` and the repository root (`/`), then save.
+4. Wait for GitHub Pages to finish its deployment and open the published URL shown in Settings → Pages. Confirm the map, styles, favicon, and project links load there.
 
-- Software Architecture & Technical Direction
-- Backend and Full-Stack Development Oversight
-- Engineering Standards & Code Quality
-- Technical Planning & Decision-Making
-- Development Workflow Coordination
-- Software Delivery & Maintainability
-- Technical Evaluation of Tools and Frameworks
-
-###  Information Technology Leadership
-
-- IT Planning & Technology Strategy
-- Software and Infrastructure Integration
-- Technical Resource Coordination
-- IT Systems Evaluation
-- Technology Lifecycle Planning
-- Operational Reliability & Maintainability
-- Alignment of Software and IT with Business Requirements
-
-###  Engineering & Team Coordination
-
-- Technical Project Planning
-- Cross-Functional Collaboration
-- Development Process Management
-- Engineering Task Coordination
-- Technical Documentation
-- Software Delivery Planning
-- Problem-Solving & Technical Decision Support
-
-**Leadership Philosophy:** Build reliable systems, make informed technical decisions, and connect engineering execution with long-term organizational goals.
-
----
-
-##  Main Focus Areas
-
-| Domain | Focus |
-|---|---|
-|  Software & IT Leadership | Technical Strategy, Engineering Coordination, IT Planning |
-|  Backend Engineering | APIs, Software Architecture, Business Logic |
-|  Full-Stack Development | Web Applications, Frontend–Backend Integration |
-|  Enterprise Software | ERP, Business Systems, Workflow Automation |
-|  Data Engineering | Databases, Data Modeling, Processing |
-|  Artificial Intelligence | Machine Learning, Deep Learning, NLP |
-|  Intelligent Networks | Intelligent Networking Systems |
-|  Embedded Systems & IoT | Microcontrollers, Connected Devices |
-|  Project Management | Planning, Coordination, Delivery |
-
----
-
-##  Developer Inventory — Technical Skills
-
-###  Backend Development
-
-- Python / FastAPI
-- C# / ASP.NET Core
-- RESTful API Design
-- Backend Architecture
-- Authentication & Authorization
-- API Integration
-- Database-Driven Applications
-- Business Logic & Service Design
-
-###  Frontend Development
-
-- Vue.js
-- JavaScript / TypeScript
-- HTML / CSS
-- Frontend Integration with Backend APIs
-
-###  Data Engineering & Databases
-
-- Relational Databases
-- NoSQL Databases
-- SQL
-- Database Design
-- Data Modeling
-- Data Processing
-- Structured and Maintainable Data Systems
-
-###  Programming Languages
-
-- Python
-- C#
-- C / C++
-- JavaScript / TypeScript
-- SQL
-
-###  Machine Learning & AI
-
-- PyTorch
-- Machine Learning
-- Deep Learning
-- Natural Language Processing
-- Data-Driven Modeling
-- Applied Artificial Intelligence
-
-###  Embedded Systems & IoT
-
-- STM32
-- Arduino
-- ATmega Microcontrollers
-- ARM-Based Systems
-- Embedded C/C++
-- Sensor Integration
-- IoT-Based System Development
-
-###  Engineering & Research
-
-- Intelligent Networks
-- Smart Engineering Systems
-- Mechatronic Systems
-- Applied Machine Learning
-- Research-Oriented Development
-
----
-
-##  Research Quests
-
-###  Quest 01 — Natural Language Processing
-
-`[ RESEARCH EXPERIENCE ]`
-
-My NLP research focuses on:
-
-**The impact of linguistic data and corpus-based tools on teaching lexically ambiguous words to non-Persian speakers.**
-
-This research explores the intersection of:
-
-- Natural Language Processing
-- Corpus Linguistics
-- Persian Language Learning
-- Educational Technology
-- Lexical Ambiguity
-
-###  Quest 02 — Intelligent Networks
-
-`[ RESEARCH IN PROGRESS ]`
-
-I am currently working on a research project involving **intelligent networks** and intelligent engineering approaches.
-
-The specific technical details and research methodology are not publicly disclosed at this stage.
-
----
-
-## 🛠️ What I Build
-
-I enjoy designing and developing software systems that solve practical engineering and organizational problems.
-
-My interests include:
-
-- Enterprise Resource Planning (ERP) Systems
-- Business Process and Workflow Automation
-- Backend Services and API Platforms
-- Database-Driven Business Applications
-- AI-Assisted Software Solutions
-- Intelligent and Data-Driven Systems
-- Embedded and IoT-Integrated Applications
-
-I am especially interested in projects where **software architecture, business requirements, and intelligent technologies** come together to create reliable, maintainable, and scalable solutions.
-
----
-
-##  Current Missions
-
-- `[ACTIVE]` Software & IT Leadership
-- `[ACTIVE]` Backend Engineering & Software Architecture
-- `[ACTIVE]` Enterprise Software Development
-- `[RESEARCH]` Intelligent Networks
-- `[EXPLORE]` AI-Driven Engineering Systems
-
----
-
-##  Communication Terminal
-
-**Email:** danialebrazeh@gmail.com
-
----
-
-###  End of Profile
-
-`> Engineering reliable systems.`
-
-`> Leading software and information technology.`
-
-`> Exploring intelligent engineering.`
-
-**[ STATUS: ONLINE ]**
+No deployment was performed as part of this source change. The remaining manual step is enabling/verifying Pages for the repository in GitHub settings.

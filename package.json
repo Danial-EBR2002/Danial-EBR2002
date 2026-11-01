@@ -1,0 +1,13 @@
+{
+  "name": "danial-exe-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test",
+    "check": "node --check src/main.js && node --check src/world.js && node --check src/renderer.js && node --check src/input.js && node --check src/ui.js && node --check src/portfolio-data.js"
+  }
+}

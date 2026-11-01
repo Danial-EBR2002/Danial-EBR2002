@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0D1117">
+  <meta name="description" content="Danial Ebrazeh — Chief Software & Information Officer, backend-focused software engineer, and Computer Engineering undergraduate. Explore the DANIAL.EXE CSIO Terminal.">
+  <meta property="og:title" content="DANIAL.EXE — Danial Ebrazeh">
+  <meta property="og:description" content="A playable pixel-art portfolio for software and IT leadership, engineering, research, and real projects.">
+  <meta property="og:type" content="website">
+  <title>DANIAL.EXE — Danial Ebrazeh | CSIO Terminal</title>
+  <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./src/main.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#professional-archive">Skip the game and go to the complete portfolio</a>
+  <div class="site-shell" id="top">
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="DANIAL.EXE, return to top">
+        <span class="brand-mark" aria-hidden="true">DE</span>
+        <span class="brand-name">DANIAL<span class="brand-dot">.</span>EXE</span>
+        <span class="brand-caption">CSIO TERMINAL</span>
+      </a>
+      <nav class="site-nav" aria-label="Portfolio sections">
+        <a href="#command-center">Command Center</a>
+        <a href="#tech-inventory">Tech Inventory</a>
+        <a href="#quest-log">Quest Log</a>
+        <a href="#research-lab">Research Lab</a>
+        <a href="#communication-terminal">Contact</a>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="status-led" aria-hidden="true"></span> PLAYER PROFILE <span class="eyebrow-divider">/</span> SYSTEM ONLINE</p>
+          <h1 id="hero-title">Danial Ebrazeh<span class="hero-title-role">Chief Software &amp; Information Officer</span></h1>
+          <p class="hero-summary">Backend-focused software engineer and Computer Engineering undergraduate working across software leadership, enterprise systems, and intelligent technologies.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#command-deck">Enter the world <span aria-hidden="true">↘</span></a>
+            <a class="button button-secondary" href="#professional-archive">View complete profile</a>
+          </div>
+        </div>
+        <div class="hero-facts" aria-label="Professional focus">
+          <div class="hero-fact"><span>ROLE</span><strong>Software &amp; IT leadership</strong></div>
+          <div class="hero-fact"><span>ENGINEERING</span><strong>Backend-focused full-stack</strong></div>
+          <div class="hero-fact"><span>EDUCATION</span><strong>Computer Engineering undergraduate</strong></div>
+          <div class="hero-fact"><span>RESEARCH</span><strong>NLP · Intelligent networks</strong></div>
+        </div>
+      </section>
+
+      <section class="command-deck panel-frame" id="command-deck" aria-labelledby="command-deck-title">
+        <div class="deck-heading">
+          <div>
+            <p class="eyebrow">WORLD INTERFACE <span class="eyebrow-divider">/</span> BUILD 01</p>
+            <h2 id="command-deck-title">The CSIO Terminal</h2>
+          </div>
+          <div class="mode-switch" role="group" aria-label="Choose a navigation mode">
+            <button class="mode-button is-active" id="explore-mode-button" type="button" data-mode="explore" aria-controls="explore-mode" aria-pressed="true">Explore Mode</button>
+            <button class="mode-button" id="quick-mode-button" type="button" data-mode="quick" aria-controls="quick-mode" aria-pressed="false">Quick Navigation</button>
+          </div>
+        </div>
+
+        <div class="mode-panel" id="explore-mode">
+          <div class="explore-layout">
+            <div class="game-column">
+              <div class="screen-bar">
+                <span><span class="screen-dot" aria-hidden="true"></span> ENGINEERING OFFICE <span class="screen-separator">//</span> LIVE MAP</span>
+                <span class="screen-resolution">640 × 400 PX</span>
+              </div>
+              <div class="canvas-frame">
+                <canvas id="game-canvas" width="640" height="400" tabindex="0" aria-label="Top-down pixel-art engineering office. Focus here and use WASD or arrow keys to move; press E or Enter near a terminal to open it." aria-describedby="controls-help">
+                  An interactive pixel-art office map. Use Quick Navigation below to reach every portfolio section without the game.
+                </canvas>
+                <div class="interaction-prompt" id="interaction-prompt" hidden aria-hidden="true"></div>
+              </div>
+              <div class="game-controls" id="controls-help">
+                <p class="keyboard-hint"><span class="control-label">MOVE</span> <kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> <span class="hint-or">or</span> <kbd>↑</kbd><kbd>←</kbd><kbd>↓</kbd><kbd>→</kbd><span class="hint-gap"></span><span class="control-label">INTERACT</span> <kbd>E</kbd> <span class="hint-or">/</span> <kbd>Enter</kbd></p>
+                <div class="touch-controls" aria-label="Touch movement controls">
+                  <div class="dpad" role="group" aria-label="Move character">
+                    <button class="dpad-button dpad-up" type="button" data-move="up" aria-label="Move up">▲</button>
+                    <button class="dpad-button dpad-left" type="button" data-move="left" aria-label="Move left">◀</button>
+                    <button class="dpad-button dpad-down" type="button" data-move="down" aria-label="Move down">▼</button>
+                    <button class="dpad-button dpad-right" type="button" data-move="right" aria-label="Move right">▶</button>
+                  </div>
+                  <button class="button button-interact" type="button" data-interact>Interact <span aria-hidden="true">↗</span></button>
+                </div>
+              </div>
+              <p class="game-status" id="game-status" role="status" aria-live="polite">Click the map, then explore with the keyboard. Your full profile is available below.</p>
+            </div>
+
+            <aside class="world-sidebar" aria-label="World map and direct access">
+              <div class="sidebar-heading">
+                <span class="mini-label">OFFICE DIRECTORY</span>
+                <span class="map-coordinate" aria-hidden="true">MAP 01</span>
+              </div>
+              <p class="sidebar-copy">Walk up to a workstation and press <kbd>E</kbd>, or open any station directly.</p>
+              <ul class="station-list">
+                <li><span class="station-marker marker-purple" aria-hidden="true"></span><button type="button" data-open-panel="command-center">CSIO Office <span>01</span></button></li>
+                <li><span class="station-marker marker-cyan" aria-hidden="true"></span><button type="button" data-open-panel="tech-inventory">Developer Workstation <span>02</span></button></li>
+                <li><span class="station-marker marker-green" aria-hidden="true"></span><button type="button" data-open-panel="server-room">Server Room <span>03</span></button></li>
+                <li><span class="station-marker marker-gold" aria-hidden="true"></span><button type="button" data-open-panel="research-lab">Research Lab <span>04</span></button></li>
+                <li><span class="station-marker marker-purple" aria-hidden="true"></span><button type="button" data-open-panel="quest-log">Project Terminal <span>05</span></button></li>
+                <li><span class="station-marker marker-cyan" aria-hidden="true"></span><button type="button" data-open-panel="communication-terminal">Communication Terminal <span>06</span></button></li>
+              </ul>
+              <div class="sidebar-foot"><span class="tiny-led" aria-hidden="true"></span> LOCAL NAVIGATION AVAILABLE</div>
+            </aside>
+          </div>
+        </div>
+
+        <div class="mode-panel quick-mode-panel" id="quick-mode" hidden>
+          <div class="quick-intro">
+            <p class="eyebrow">DIRECT ACCESS <span class="eyebrow-divider">/</span> NO MOVEMENT REQUIRED</p>
+            <h3>Choose a terminal</h3>
+            <p>Open any portfolio file directly. The complete profile also remains available as readable page content below.</p>
+          </div>
+          <div class="quick-grid">
+            <button class="quick-tile" type="button" data-open-panel="player-profile"><span class="quick-index">00</span><span class="quick-title">Player Profile</span><span class="quick-description">Identity &amp; introduction</span><span class="quick-arrow" aria-hidden="true">↗</span></button>
+            <button class="quick-tile" type="button" data-open-panel="command-center"><span class="quick-index">01</span><span class="quick-title">Command Center</span><span class="quick-description">CSIO leadership &amp; strategy</span><span class="quick-arrow" aria-hidden="true">↗</span></button>
+            <button class="quick-tile" type="button" data-open-panel="tech-inventory"><span class="quick-index">02</span><span class="quick-title">Tech Inventory</span><span class="quick-description">Skills, tools &amp; domains</span><span class="quick-arrow" aria-hidden="true">↗</span></button>
+            <button class="quick-tile" type="button" data-open-panel="server-room"><span class="quick-index">03</span><span class="quick-title">Server Room</span><span class="quick-description">Backend &amp; systems engineering</span><span class="quick-arrow" aria-hidden="true">↗</span></button>
+            <button class="quick-tile" type="button" data-open-panel="research-lab"><span class="quick-index">04</span><span class="quick-title">Research Lab</span><span class="quick-description">NLP &amp; intelligent networks</span><span class="quick-arrow" aria-hidden="true">↗</span></button>
+            <button class="quick-tile" type="button" data-open-panel="quest-log"><span class="quick-index">05</span><span class="quick-title">Quest Log</span><span class="quick-description">Public GitHub projects</span><span class="quick-arrow" aria-hidden="true">↗</span></button>
+            <button class="quick-tile" type="button" data-open-panel="communication-terminal"><span class="quick-index">06</span><span class="quick-title">Communication Terminal</span><span class="quick-description">Email &amp; GitHub</span><span class="quick-arrow" aria-hidden="true">↗</span></button>
+          </div>
+        </div>
+      </section>
+
+      <section class="archive-section" id="professional-archive" aria-labelledby="archive-title">
+        <div class="archive-heading">
+          <div>
+            <p class="eyebrow">COMPLETE PROFESSIONAL PROFILE <span class="eyebrow-divider">/</span> ALWAYS ACCESSIBLE</p>
+            <h2 id="archive-title">Portfolio Archive</h2>
+          </div>
+          <p class="archive-note">No quest required. Read, browse, and follow the links directly.</p>
+        </div>
+
+        <div class="archive-grid">
+          <section class="archive-panel archive-profile" id="player-profile" aria-labelledby="profile-heading">
+            <header class="archive-panel-heading"><span class="archive-file">FILE 00 / IDENTITY</span><h2 id="profile-heading">Player Profile</h2></header>
+            <div class="archive-panel__body">
+              <p class="profile-name">Danial Ebrazeh</p>
+              <p class="profile-role">Chief Software &amp; Information Officer (CSIO)</p>
+              <p>I am a Computer Engineering undergraduate and backend-focused full-stack software engineer with interests spanning enterprise software, databases, intelligent systems, embedded systems, and IoT.</p>
+              <p>My professional focus connects software engineering leadership and information technology with architecture, technical coordination, and the planning and delivery of technology solutions.</p>
+              <ul class="fact-list"><li><span>Education</span><strong>Computer Engineering undergraduate</strong></li><li><span>Engineering focus</span><strong>Backend-focused full-stack development</strong></li><li><span>Domains</span><strong>Software, IT, enterprise systems, intelligent systems</strong></li></ul>
+            </div>
+          </section>
+
+          <section class="archive-panel" id="command-center" aria-labelledby="command-heading">
+            <header class="archive-panel-heading"><span class="archive-file">FILE 01 / LEADERSHIP</span><h2 id="command-heading">Command Center</h2></header>
+            <div class="archive-panel__body">
+              <p>As CSIO, my responsibilities and professional interests center on connecting engineering execution with organizational technology needs.</p>
+              <ul class="pixel-list"><li>Software engineering leadership and software architecture</li><li>Technical planning and decision-making</li><li>IT strategy, planning, and coordination</li><li>Engineering workflow management and software delivery</li><li>Software and infrastructure integration</li><li>Technology evaluation and maintainability</li><li>Alignment between engineering and business requirements</li></ul>
+              <p class="panel-footnote">Focused on responsible technical direction and reliable delivery; no company-specific or unverified claims are implied.</p>
+            </div>
+          </section>
+
+          <section class="archive-panel" id="tech-inventory" aria-labelledby="inventory-heading">
+            <header class="archive-panel-heading"><span class="archive-file">FILE 02 / SKILLS</span><h2 id="inventory-heading">Tech Inventory</h2></header>
+            <div class="archive-panel__body skill-groups">
+              <div class="skill-group"><h3>Backend Engineering</h3><p>Python, FastAPI, C#, ASP.NET Core, RESTful APIs, software architecture, authentication and authorization, API integration.</p></div>
+              <div class="skill-group"><h3>Frontend Development</h3><p>Vue.js, JavaScript, TypeScript, HTML, CSS.</p></div>
+              <div class="skill-group"><h3>Databases &amp; Data</h3><p>SQL, relational databases, NoSQL, database design, data modeling, data processing.</p></div>
+              <div class="skill-group"><h3>AI &amp; Machine Learning</h3><p>PyTorch, machine learning, deep learning, natural language processing.</p></div>
+              <div class="skill-group"><h3>Embedded Systems &amp; IoT</h3><p>STM32, Arduino, ATmega, ARM-based systems, embedded C/C++, sensor integration, IoT development.</p></div>
+            </div>
+          </section>
+
+          <section class="archive-panel" id="server-room" aria-labelledby="server-heading">
+            <header class="archive-panel-heading"><span class="archive-file">FILE 03 / SYSTEMS</span><h2 id="server-heading">Server Room</h2></header>
+            <div class="archive-panel__body">
+              <p>My backend and systems interests include designing API-driven, database-backed applications and integrating software with the infrastructure and requirements around it.</p>
+              <ul class="pixel-list"><li>REST API design and integration with FastAPI and ASP.NET Core</li><li>Software architecture, business logic, and maintainable service boundaries</li><li>Authentication and authorization concepts</li><li>Relational and NoSQL data, schema design, and modeling</li><li>Enterprise software, ERP systems, and workflow-oriented applications</li></ul>
+              <p class="panel-footnote">These are areas of engineering focus—not claims about a specific production deployment or scale.</p>
+            </div>
+          </section>
+
+          <section class="archive-panel archive-projects" id="quest-log" aria-labelledby="projects-heading">
+            <header class="archive-panel-heading"><span class="archive-file">FILE 05 / PUBLIC REPOSITORIES</span><h2 id="projects-heading">Quest Log</h2></header>
+            <div class="archive-panel__body">
+              <p>Selected public repositories from <a class="inline-link" data-profile-url href="https://github.com/Danial-EBR2002" target="_blank" rel="noopener noreferrer">github.com/Danial-EBR2002</a>. Descriptions are based on each repository’s published information.</p>
+              <div class="project-grid" id="project-grid" aria-live="polite"></div>
+              <noscript><p>JavaScript is disabled. Browse the public repositories on the <a class="inline-link" href="https://github.com/Danial-EBR2002">GitHub profile</a>.</p></noscript>
+            </div>
+          </section>
+
+          <section class="archive-panel" id="research-lab" aria-labelledby="research-heading">
+            <header class="archive-panel-heading"><span class="archive-file">FILE 04 / RESEARCH</span><h2 id="research-heading">Research Lab</h2></header>
+            <div class="archive-panel__body">
+              <div class="research-entry"><span class="research-status">NLP RESEARCH</span><p class="research-title">The impact of linguistic data and corpus-based tools on teaching lexically ambiguous words to non-Persian speakers.</p><p>Research interest at the intersection of natural language processing, corpus-based tools, and language learning.</p></div>
+              <div class="research-entry"><span class="research-status is-ongoing">ONGOING</span><h3>Intelligent Networks</h3><p>An ongoing research project related to intelligent networks. Further technical details are not disclosed here.</p></div>
+            </div>
+          </section>
+
+          <section class="archive-panel archive-contact" id="communication-terminal" aria-labelledby="contact-heading">
+            <header class="archive-panel-heading"><span class="archive-file">FILE 06 / CONTACT</span><h2 id="contact-heading">Communication Terminal</h2></header>
+            <div class="archive-panel__body">
+              <p>For professional communication, use the direct email link or visit my public GitHub profile.</p>
+              <a class="contact-link" href="mailto:danialebrazeh@gmail.com"><span class="contact-icon" aria-hidden="true">@</span><span><small>EMAIL</small><strong>danialebrazeh@gmail.com</strong></span><span class="contact-arrow" aria-hidden="true">↗</span></a>
+              <a class="contact-link" data-profile-url href="https://github.com/Danial-EBR2002" target="_blank" rel="noopener noreferrer"><span class="contact-icon" aria-hidden="true">GH</span><span><small>GITHUB PROFILE</small><strong>Danial-EBR2002</strong></span><span class="contact-arrow" aria-hidden="true">↗</span></a>
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="footer-brand" href="#top">DANIAL<span class="brand-dot">.</span>EXE</a>
+      <p>Engineering reliable systems. Connecting software with technology strategy.</p>
+      <a href="#professional-archive">Back to complete profile ↑</a>
+    </footer>
+  </div>
+
+  <dialog class="info-dialog" id="info-dialog" aria-labelledby="dialog-title" aria-describedby="dialog-kicker">
+    <div class="dialog-frame">
+      <div class="dialog-topline"><span class="dialog-system"><span class="tiny-led" aria-hidden="true"></span> FILE OPEN</span><button class="dialog-close" type="button" data-close-dialog aria-label="Close panel">CLOSE <span aria-hidden="true">×</span></button></div>
+      <p class="eyebrow dialog-kicker" id="dialog-kicker">CSIO TERMINAL / PROFILE FILE</p>
+      <h2 id="dialog-title">Player Profile</h2>
+      <div class="dialog-content" id="dialog-content"></div>
+    </div>
+  </dialog>
+  <div class="sr-only" id="screen-reader-status" role="status" aria-live="polite"></div>
+</body>
+</html>
