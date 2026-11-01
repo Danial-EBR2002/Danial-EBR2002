@@ -1,8 +1,8 @@
 [![DANIAL.EXE — pixel-art portfolio and engineering workspace](assets/profile-banner.svg)](https://danial-ebr2002.github.io/Danial-EBR2002/)
 
-> Chief Software & Information Officer (CSIO) · Computer Engineering undergraduate · Backend-focused full-stack software engineer
+> Chief Software & Information Officer (CSIO) at MOBIC · Computer Engineering undergraduate · Backend-focused full-stack software engineer
 >
-> I work across software engineering leadership and IT strategy, with engineering interests in backend systems, enterprise software, intelligent technologies, embedded systems, and IoT.
+> I work across software engineering leadership and IT strategy at MOBIC, with engineering interests in backend systems, enterprise software, intelligent technologies, embedded systems, and IoT.
 
 [▶ OPEN THE INTERACTIVE PORTFOLIO](https://danial-ebr2002.github.io/Danial-EBR2002/) · [✉ CONTACT](mailto:danialebrazeh@gmail.com) · [PORTFOLIO GUIDE](PORTFOLIO_SETUP.md)
 

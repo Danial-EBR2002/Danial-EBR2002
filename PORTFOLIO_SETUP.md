@@ -4,7 +4,7 @@ A lightweight, original pixel-art portfolio for Danial Ebrazeh. Explore a small 
 
 ## Portfolio
 
-Danial Ebrazeh is a Chief Software & Information Officer (CSIO), a Computer Engineering undergraduate, and a backend-focused full-stack software engineer. The portfolio presents software and IT leadership, engineering interests, public GitHub projects, and research without inventing company details or undisclosed research information.
+Danial Ebrazeh is the Chief Software & Information Officer (CSIO) at MOBIC, a Computer Engineering undergraduate, and a backend-focused full-stack software engineer. The portfolio presents software and IT leadership, engineering interests, public GitHub projects, and research without inventing company details or undisclosed research information.
 
 - Leadership: software engineering leadership, architecture, technical planning, IT strategy and coordination, workflow management, delivery, technology evaluation, and alignment with business requirements.
 - Backend: Python, FastAPI, C#, ASP.NET Core, RESTful APIs, architecture, authentication and authorization, API integration.
