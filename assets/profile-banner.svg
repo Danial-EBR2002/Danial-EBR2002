@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 360" role="img" aria-labelledby="title desc" shape-rendering="crispEdges">
+  <title id="title">DANIAL.EXE — Danial Ebrazeh</title>
+  <desc id="desc">A pixel-art software engineering terminal with a live portfolio link.</desc>
+  <defs>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#7183a3" stroke-opacity=".08" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1280" height="360" fill="#0d1117"/>
+  <rect width="1280" height="360" fill="url(#grid)"/>
+  <rect x="18" y="18" width="1244" height="324" fill="#111925" stroke="#33415c" stroke-width="2"/>
+  <rect x="18" y="18" width="1244" height="6" fill="#aa91ff"/>
+  <rect x="1182" y="18" width="80" height="6" fill="#65e1e3"/>
+  <rect x="18" y="18" width="14" height="14" fill="#65e1e3"/>
+  <rect x="1248" y="328" width="14" height="14" fill="#f2cc60"/>
+
+  <rect x="54" y="57" width="8" height="8" fill="#9ae7a7"/>
+  <text x="74" y="66" fill="#9ae7a7" font-family="Consolas, 'Courier New', monospace" font-size="13" font-weight="700" letter-spacing="2">PROFILE SYSTEM // ONLINE</text>
+  <text x="54" y="151" fill="#ecf0f8" font-family="Consolas, 'Courier New', monospace" font-size="76" font-weight="800" letter-spacing="-4">DANIAL.EXE</text>
+  <text x="59" y="188" fill="#aa91ff" font-family="Consolas, 'Courier New', monospace" font-size="16" font-weight="700" letter-spacing="1">CSIO  /  COMPUTER ENGINEERING</text>
+  <text x="59" y="218" fill="#b0bbcf" font-family="Consolas, 'Courier New', monospace" font-size="15">Backend-focused full-stack software engineer</text>
+
+  <rect x="59" y="254" width="274" height="46" fill="#514477"/>
+  <rect x="54" y="249" width="274" height="46" fill="#aa91ff"/>
+  <text x="72" y="278" fill="#111020" font-family="Consolas, 'Courier New', monospace" font-size="12" font-weight="800" letter-spacing=".5">OPEN INTERACTIVE PORTFOLIO</text>
+  <path d="M305 267h10m-4-4 4 4-4 4" fill="none" stroke="#111020" stroke-width="2"/>
+  <text x="59" y="325" fill="#8997b0" font-family="Consolas, 'Courier New', monospace" font-size="10" letter-spacing="1.4">BACKEND SYSTEMS  ·  AI / DATA  ·  EMBEDDED / IoT</text>
+
+  <rect x="725" y="53" width="486" height="238" fill="#101827" stroke="#33415c" stroke-width="2"/>
+  <path d="M741 68h12m-6-6v12m440 0h12m-6-6v12M741 275h12m-6-6v12m440 0h12m-6-6v12" stroke="#596987" stroke-width="2"/>
+  <text x="765" y="82" fill="#8997b0" font-family="Consolas, 'Courier New', monospace" font-size="9" font-weight="700" letter-spacing="1.5">WORKSPACE / 01</text>
+
+  <rect x="770" y="100" width="238" height="135" fill="#17213a" stroke="#65e1e3" stroke-width="3"/>
+  <rect x="781" y="111" width="216" height="113" fill="#0d1117"/>
+  <rect x="794" y="124" width="7" height="7" fill="#9ae7a7"/>
+  <text x="811" y="132" fill="#9ae7a7" font-family="Consolas, 'Courier New', monospace" font-size="10" font-weight="700">$ ship --portfolio</text>
+  <rect x="794" y="144" width="43" height="5" fill="#aa91ff"/>
+  <rect x="841" y="144" width="76" height="5" fill="#65e1e3"/>
+  <rect x="922" y="144" width="48" height="5" fill="#f2cc60"/>
+  <rect x="794" y="159" width="71" height="5" fill="#65e1e3"/>
+  <rect x="869" y="159" width="96" height="5" fill="#596987"/>
+  <rect x="794" y="174" width="30" height="5" fill="#f2cc60"/>
+  <rect x="829" y="174" width="116" height="5" fill="#aa91ff"/>
+  <rect x="794" y="189" width="92" height="5" fill="#596987"/>
+  <rect x="891" y="189" width="72" height="5" fill="#9ae7a7"/>
+  <rect x="794" y="204" width="7" height="7" fill="#9ae7a7"/>
+  <text x="810" y="211" fill="#b0bbcf" font-family="Consolas, 'Courier New', monospace" font-size="9">BUILD COMPLETE</text>
+  <rect x="871" y="235" width="36" height="18" fill="#33415c"/>
+  <rect x="853" y="252" width="72" height="6" fill="#596987"/>
+
+  <rect x="1032" y="104" width="91" height="154" fill="#17213a" stroke="#aa91ff" stroke-width="2"/>
+  <rect x="1042" y="115" width="71" height="35" fill="#0d1117" stroke="#33415c"/>
+  <rect x="1050" y="123" width="7" height="7" fill="#9ae7a7"/>
+  <rect x="1062" y="124" width="41" height="4" fill="#596987"/>
+  <rect x="1050" y="136" width="48" height="4" fill="#33415c"/>
+  <rect x="1042" y="160" width="71" height="35" fill="#0d1117" stroke="#33415c"/>
+  <rect x="1050" y="168" width="7" height="7" fill="#65e1e3"/>
+  <rect x="1062" y="169" width="41" height="4" fill="#596987"/>
+  <rect x="1050" y="181" width="48" height="4" fill="#33415c"/>
+  <rect x="1042" y="205" width="71" height="35" fill="#0d1117" stroke="#33415c"/>
+  <rect x="1050" y="213" width="7" height="7" fill="#f2cc60"/>
+  <rect x="1062" y="214" width="41" height="4" fill="#596987"/>
+  <rect x="1050" y="226" width="48" height="4" fill="#33415c"/>
+
+  <rect x="744" y="264" width="468" height="12" fill="#6d5aa8"/>
+  <rect x="751" y="276" width="8" height="15" fill="#33415c"/>
+  <rect x="1197" y="276" width="8" height="15" fill="#33415c"/>
+  <rect x="1172" y="222" width="24" height="27" fill="#65e1e3"/>
+  <rect x="1177" y="211" width="14" height="17" fill="#f2cc60"/>
+  <rect x="1174" y="207" width="8" height="6" fill="#17213a"/>
+  <rect x="1188" y="207" width="8" height="6" fill="#17213a"/>
+  <rect x="1175" y="216" width="3" height="3" fill="#0d1117"/>
+  <rect x="1190" y="216" width="3" height="3" fill="#0d1117"/>
+  <rect x="1177" y="249" width="7" height="12" fill="#aa91ff"/>
+  <rect x="1187" y="249" width="7" height="12" fill="#aa91ff"/>
+</svg>
