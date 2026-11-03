@@ -1,4 +1,5 @@
 import { GITHUB_PROFILE, PANELS, PROJECTS } from "./portfolio-data.js";
+import { INTERACTABLES } from "./world.js";
 
 function makeElement(tag, className, textContent) {
   const element = document.createElement(tag);
@@ -54,6 +55,10 @@ export function createPortfolioUI(onModeChange = () => {}) {
   let lastTrigger = null;
   let activeMode = "explore";
   let nearbyId = null;
+  const visited = new Set();
+  const progressCount = document.getElementById("file-progress-count");
+  const progressBar = document.getElementById("file-progress-bar");
+  const progressTrack = document.getElementById("file-progress-track");
 
   renderProjectCards(document.getElementById("project-grid"));
 
@@ -80,6 +85,21 @@ export function createPortfolioUI(onModeChange = () => {}) {
     onModeChange(activeMode);
   }
 
+  function markVisited(id) {
+    if (!INTERACTABLES.some((station) => station.id === id) || visited.has(id)) return;
+    visited.add(id);
+    const total = INTERACTABLES.length;
+    for (const button of document.querySelectorAll(`.station-list [data-open-panel="${id}"]`)) {
+      button.closest("li")?.classList.add("is-visited");
+    }
+    if (progressCount) progressCount.textContent = `${visited.size} / ${total}`;
+    if (progressBar) progressBar.style.width = `${Math.round((visited.size / total) * 100)}%`;
+    progressTrack?.setAttribute("aria-valuenow", String(visited.size));
+    if (visited.size === total) {
+      setStatus("All six terminals opened. Thanks for exploring the whole office!");
+    }
+  }
+
   function openPanel(id, trigger = document.activeElement) {
     const panel = PANELS[id];
     const source = panel && document.getElementById(panel.sectionId);
@@ -96,6 +116,7 @@ export function createPortfolioUI(onModeChange = () => {}) {
     } else {
       dialog.setAttribute("open", "");
     }
+    markVisited(id);
     return true;
   }
 
@@ -154,6 +175,7 @@ export function createPortfolioUI(onModeChange = () => {}) {
     setMode,
     setNearby,
     getMode: () => activeMode,
+    getVisited: () => visited,
     announce: setStatus,
   };
 }

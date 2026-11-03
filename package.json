@@ -8,6 +8,6 @@
   },
   "scripts": {
     "test": "node --test",
-    "check": "node --check src/main.js && node --check src/world.js && node --check src/renderer.js && node --check src/input.js && node --check src/ui.js && node --check src/portfolio-data.js"
+    "check": "node --check src/main.js && node --check src/world.js && node --check src/renderer.js && node --check src/input.js && node --check src/ui.js && node --check src/portfolio-data.js && node --check src/sprite.js"
   }
 }

@@ -1,4 +1,5 @@
-import { INTERACTABLES, PLAYER_SIZE, WORLD } from "./world.js";
+import { INTERACTABLES, WORLD } from "./world.js";
+import { drawPlayerSprite } from "./sprite.js";
 
 const COLOR = Object.freeze({
   floor: "#18233a",
@@ -12,10 +13,6 @@ const COLOR = Object.freeze({
   green: "#9ae7a7",
   gold: "#f2cc60",
   white: "#e7edf7",
-  skin: "#e7b393",
-  hair: "#262638",
-  shirt: "#846bd4",
-  pants: "#40587f",
 });
 
 function rect(ctx, x, y, width, height, fill) {
@@ -233,55 +230,98 @@ function drawTerminalObjects(ctx, time) {
   }
 }
 
-function drawStationMarker(ctx, station, nearby, time, reducedMotion) {
+function drawStationMarker(ctx, station, nearby, time, reducedMotion, visited) {
   const selected = nearby?.id === station.id;
   const pulse = reducedMotion ? 0 : Math.floor(time / 260) % 2;
   const color = station.id === "server-room" ? COLOR.green :
     station.id === "research-lab" ? COLOR.gold :
       station.id === "tech-inventory" || station.id === "communication-terminal" ? COLOR.cyan : COLOR.purple;
   const y = station.y - 16 - (selected && pulse ? 2 : 0);
+  if (selected) {
+    // A soft floor ring shows which terminal E / Enter will open.
+    rect(ctx, station.x - 12, station.y + 6, 24, 1, "rgba(242, 204, 96, .55)");
+    rect(ctx, station.x - 9, station.y + 7, 18, 1, "rgba(242, 204, 96, .3)");
+  }
   rect(ctx, station.x - 4, y - 2, 8, 1, selected ? COLOR.gold : "#71809a");
   rect(ctx, station.x - 5, y - 1, 10, 7, selected ? COLOR.gold : color);
   rect(ctx, station.x - 3, y + 1, 6, 3, "#101724");
-  rect(ctx, station.x - 1, y + 2, 2, 1, selected ? COLOR.gold : color);
-}
-
-function drawPlayer(ctx, player, time, reducedMotion) {
-  const x = Math.round(player.x - 1);
-  const bounce = reducedMotion ? 0 : player.moving
-    ? (Math.floor(time / 115) % 2 ? 1 : 0)
-    : Math.round(Math.sin(time / 700));
-  const y = Math.round(player.y - 1 + bounce);
-  const dark = "#171a2b";
-  const eye = player.direction === "left" ? 0 : player.direction === "right" ? 3 : 2;
-  rect(ctx, x + 2, y + 17, 12, 3, "rgba(3, 6, 12, .55)");
-  // Hair / head / skin / shirt are hand-drawn as a compact original sprite.
-  rect(ctx, x + 4, y + 1, 8, 2, dark);
-  rect(ctx, x + 2, y + 3, 12, 4, dark);
-  rect(ctx, x + 3, y + 6, 10, 5, COLOR.skin);
-  rect(ctx, x + 2, y + 4, 3, 4, dark);
-  rect(ctx, x + 12, y + 4, 2, 4, dark);
-  rect(ctx, x + 5 + eye, y + 7, 2, 2, "#293148");
-  rect(ctx, x + 5, y + 11, 8, 2, "#d29a7d");
-  rect(ctx, x + 2, y + 13, 12, 6, COLOR.shirt);
-  rect(ctx, x + 1, y + 14, 3, 5, COLOR.shirt);
-  rect(ctx, x + 5, y + 14, 6, 2, COLOR.cyan);
-  rect(ctx, x + 3, y + 19, 10, 5, COLOR.pants);
-  const stride = player.moving && !reducedMotion && Math.floor(time / 115) % 2;
-  if (stride) {
-    rect(ctx, x + 2, y + 22, 5, 3, COLOR.pants);
-    rect(ctx, x + 9, y + 20, 5, 3, COLOR.pants);
-    rect(ctx, x + 1, y + 24, 5, 2, "#d7d9e2");
-    rect(ctx, x + 10, y + 23, 5, 2, "#d7d9e2");
+  if (visited) {
+    // Check mark: this file has already been opened.
+    // White on the dark screen stays visible on every marker colour.
+    rect(ctx, station.x - 2, y + 2, 1, 1, COLOR.white);
+    rect(ctx, station.x - 1, y + 3, 1, 1, COLOR.white);
+    rect(ctx, station.x, y + 2, 1, 1, COLOR.white);
+    rect(ctx, station.x + 1, y + 1, 1, 1, COLOR.white);
   } else {
-    rect(ctx, x + 3, y + 23, 4, 3, COLOR.pants);
-    rect(ctx, x + 9, y + 23, 4, 3, COLOR.pants);
-    rect(ctx, x + 2, y + 25, 5, 2, "#d7d9e2");
-    rect(ctx, x + 9, y + 25, 5, 2, "#d7d9e2");
+    rect(ctx, station.x - 1, y + 2, 2, 1, selected ? COLOR.gold : color);
   }
 }
 
-export function renderWorld(ctx, player, nearby, time = 0, reducedMotion = false) {
+const FACING_VECTOR = Object.freeze({
+  up: [0, -1], down: [0, 1], left: [-1, 0], right: [1, 0],
+});
+
+function drawDust(ctx, player, time) {
+  if (!player.moving) return;
+  const [vx, vy] = FACING_VECTOR[player.direction] ?? [0, 1];
+  const footX = player.x + 7;
+  const footY = player.y + 25;
+  for (let index = 0; index < 3; index += 1) {
+    const phase = ((time / 360) + index / 3) % 1;
+    const size = Math.max(1, Math.round(3 * (1 - phase)));
+    const alpha = (0.38 * (1 - phase)).toFixed(2);
+    const spread = (index - 1) * 2;
+    const x = footX - vx * phase * 11 + (vy !== 0 ? spread : 0) - size / 2;
+    const y = footY - vy * phase * 9 + (vx !== 0 ? spread : 0) - size / 2;
+    rect(ctx, x, y, size, size, `rgba(170, 184, 208, ${alpha})`);
+  }
+}
+
+// 4x5 bitmap glyphs for the name tag. Canvas text is anti-aliased and smears at
+// this size, while rects stay crisp under the pixelated upscale.
+const TAG_GLYPHS = Object.freeze({
+  D: ["1110", "1001", "1001", "1001", "1110"],
+  A: ["0110", "1001", "1111", "1001", "1001"],
+  N: ["1001", "1101", "1011", "1001", "1001"],
+  I: ["111", "010", "010", "010", "111"],
+  L: ["1000", "1000", "1000", "1000", "1111"],
+});
+const TAG_TEXT = "DANIAL";
+const TAG_TEXT_WIDTH = [...TAG_TEXT].reduce((total, letter) => total + TAG_GLYPHS[letter][0].length + 1, -1);
+const TAG_WIDTH = TAG_TEXT_WIDTH + 6;
+
+function drawNameTag(ctx, player) {
+  const left = Math.round(player.x + 7 - TAG_WIDTH / 2);
+  const top = Math.round(player.y) - 19;
+  rect(ctx, left, top, TAG_WIDTH, 9, "rgba(11, 17, 29, .85)");
+  rect(ctx, left, top + 8, TAG_WIDTH, 1, COLOR.green);
+  let cursor = left + 3;
+  for (const letter of TAG_TEXT) {
+    const glyph = TAG_GLYPHS[letter];
+    glyph.forEach((line, row) => {
+      for (let column = 0; column < line.length; column += 1) {
+        if (line[column] === "1") rect(ctx, cursor + column, top + 2 + row, 1, 1, COLOR.white);
+      }
+    });
+    cursor += glyph[0].length + 1;
+  }
+}
+
+function drawPlayer(ctx, player, time, reducedMotion) {
+  if (!reducedMotion) drawDust(ctx, player, time);
+  drawPlayerSprite(ctx, player, time, reducedMotion);
+  drawNameTag(ctx, player);
+}
+
+function drawProgress(ctx, visitedCount, total) {
+  const done = visitedCount >= total;
+  text(ctx, `FILES ${visitedCount}/${total}`, 24, 4, done ? COLOR.gold : COLOR.white, 8);
+  for (let index = 0; index < total; index += 1) {
+    rect(ctx, 92 + index * 8, 6, 5, 5, index < visitedCount ? (done ? COLOR.gold : COLOR.green) : "#111827");
+  }
+}
+
+export function renderWorld(ctx, player, nearby, time = 0, reducedMotion = false, visited = new Set()) {
   if (!ctx) return;
   ctx.save();
   ctx.imageSmoothingEnabled = false;
@@ -289,7 +329,10 @@ export function renderWorld(ctx, player, nearby, time = 0, reducedMotion = false
   drawFloor(ctx);
   drawWalls(ctx);
   drawTerminalObjects(ctx, reducedMotion ? 0 : time);
-  for (const station of INTERACTABLES) drawStationMarker(ctx, station, nearby, time, reducedMotion);
+  for (const station of INTERACTABLES) {
+    drawStationMarker(ctx, station, nearby, time, reducedMotion, visited.has(station.id));
+  }
+  drawProgress(ctx, INTERACTABLES.filter((station) => visited.has(station.id)).length, INTERACTABLES.length);
   drawPlayer(ctx, player, time, reducedMotion);
   ctx.restore();
 }

@@ -23,7 +23,9 @@ Danial Ebrazeh is the Chief Software & Information Officer (CSIO) at MOBIC, a Co
 - Quick Navigation opens each portfolio file without moving the character.
 - Native accessible dialog panels close with Escape and return focus to their opener.
 - The full professional profile remains present as readable page content; gameplay is never required.
-- Collision detection, map bounds, idle/walk sprite states, and restrained animated monitor/server indicators.
+- A hand-drawn pixel-art avatar of Danial (dark swept-back hair, full beard, dark green tee) with four facings, a four-frame walk cycle, an idle bob, and a name tag. The sprite lives in `src/sprite.js` as editable character grids.
+- Discovery progress: opened stations get a check mark on the map, in the Office Directory, and in a FILES n/6 counter.
+- Collision detection, map bounds, footstep dust, and restrained animated monitor/server indicators.
 - Honors the operating system’s reduced-motion preference; no external fonts, runtime assets, APIs, or backend are required.
 - Selected project links are from public repositories on the actual GitHub account. Descriptions are grounded in their published READMEs; the page does not request the GitHub API at runtime.
 

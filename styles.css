@@ -144,6 +144,14 @@ button:focus-visible, a:focus-visible, canvas:focus-visible, dialog:focus-visibl
 .station-list button { width: 100%; min-height: 37px; display: flex; align-items: center; justify-content: space-between; gap: 6px; padding: 5px 0; border: 0; background: transparent; color: var(--text); text-align: left; font: 600 10px/1.35 var(--mono); cursor: pointer; }
 .station-list button span { color: var(--subtle); font-size: 8px; }
 .station-list button:hover { color: var(--cyan); }
+.station-list li.is-visited button span { color: var(--green); }
+.station-list li.is-visited button span::before { content: "\2713\00a0"; font: 700 10px/1 var(--sans); }
+.sidebar-progress { margin-top: 14px; }
+.progress-row { display: flex; justify-content: space-between; align-items: baseline; color: var(--subtle); font: 700 8px/1.5 var(--mono); letter-spacing: .08em; }
+.progress-row strong { color: var(--text); font-size: 10px; }
+.progress-track { height: 4px; margin-top: 6px; background: #0b111d; border: 1px solid var(--line); }
+.progress-track span { display: block; width: 0; height: 100%; background: var(--green); transition: width .25s steps(4); }
+@media (prefers-reduced-motion: reduce) { .progress-track span { transition: none; } }
 .sidebar-foot { margin-top: auto; padding-top: 14px; color: var(--subtle); font: 700 8px/1.5 var(--mono); letter-spacing: .05em; }
 .tiny-led { width: 6px; height: 6px; margin-right: 6px; color: var(--green); background: var(--green); }
 .quick-mode-panel { padding: 14px 0 0; }

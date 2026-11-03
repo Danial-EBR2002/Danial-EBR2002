@@ -24,7 +24,7 @@ if (!canvas || !context) {
       player = stepPlayer(player, input.getDirection(), elapsed);
       nearby = findNearbyInteractable(player);
       ui.setNearby(nearby);
-      renderWorld(context, player, nearby, now, reducedMotion.matches);
+      renderWorld(context, player, nearby, now, reducedMotion.matches, ui.getVisited());
     }
     frameId = window.requestAnimationFrame(animate);
   }
